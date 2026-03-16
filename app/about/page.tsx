@@ -134,9 +134,9 @@ export default function About() {
           zIndex: 1,
         }}
       >
-        <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>get early access</p>
-        <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(28px, 4vw, 40px)', marginBottom: '16px' }}>join the waitlist</h2>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '17px', marginBottom: '40px' }}>wispr is in private beta. early access is limited.</p>
+        <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>join the waitlist</p>
+        <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(28px, 4vw, 40px)', marginBottom: '16px' }}>be first to know when wispr launches.</h2>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '17px', marginBottom: '40px' }}>sign up and we'll let you know as soon as wispr is ready.</p>
         <WaitlistForm center />
       </div>
 

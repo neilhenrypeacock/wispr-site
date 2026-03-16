@@ -69,7 +69,7 @@ export default function Home() {
       <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-24 px-6 max-w-6xl mx-auto" style={{ zIndex: 1 }}>
         <div className="max-w-2xl">
           <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '24px' }}>
-            early access — join the waitlist
+            coming soon — join the waitlist
           </p>
           <h1
             className="font-display font-bold lowercase"
@@ -87,7 +87,7 @@ export default function Home() {
       {/* TRUST BAR */}
       <div style={{ background: 'var(--royal)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '28px 24px' }}>
         <div className="max-w-6xl mx-auto flex flex-wrap items-center gap-8">
-          {['private beta', 'iOS only', 'early access open'].map(item => (
+          {['coming soon', 'iOS', 'join the waitlist'].map(item => (
             <div key={item} className="flex items-center gap-2" style={{ fontSize: '14px', color: 'var(--text-secondary)' }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--electric)', display: 'inline-block', flexShrink: 0 }} />
               {item}
@@ -159,7 +159,7 @@ export default function Home() {
 
       {/* TESTIMONIALS */}
       <section className="max-w-6xl mx-auto px-6 pb-24" style={{ position: 'relative', zIndex: 1 }}>
-        <FadeUp><p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>early access voices</p></FadeUp>
+        <FadeUp><p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>what people are saying</p></FadeUp>
         <FadeUp delay={0.05}>
           <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(32px, 5vw, 48px)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '56px' }}>
             what beta users are saying
@@ -186,7 +186,7 @@ export default function Home() {
           <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>pricing</p>
           <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(32px, 5vw, 48px)', marginBottom: '16px' }}>simple pricing,<br />coming soon</h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '17px', margin: '0 auto 32px', maxWidth: '400px' }}>
-            early access members get locked-in founder pricing. join the waitlist to secure your rate.
+            wispr is coming soon. join the waitlist to be first to know when we launch.
           </p>
           <a
             href="/pricing"
@@ -228,7 +228,7 @@ export default function Home() {
         </p>
         <WaitlistForm center />
         <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '16px', letterSpacing: '0.04em' }}>
-          iOS · early access · no credit card required
+          iOS · coming soon · no credit card required
         </p>
       </div>
 

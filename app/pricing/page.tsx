@@ -79,7 +79,7 @@ const tiers = [
 
 const faqItems = [
   { q: 'is there a free trial?', a: 'yes — 7 days of full access on the daily plan, no credit card required. you get the complete wispr experience from day one.' },
-  { q: 'what happens after the trial?', a: 'after 7 days you can subscribe to keep going. waitlist members get locked-in early access pricing before we open to everyone.' },
+  { q: 'what happens after the trial?', a: 'after 7 days you can subscribe to keep going. pricing will be confirmed at launch.' },
   { q: 'can i switch plans?', a: 'yes. you can upgrade or downgrade anytime. changes take effect at the start of your next billing period.' },
   { q: "what's the difference between monthly and annual?", a: 'annual billing saves you up to 40% compared to monthly. the price is billed as a single payment once a year.' },
   { q: 'is it available on android?', a: "iOS only for now. android is on the roadmap — join the waitlist and we'll let you know when it's ready." },
@@ -249,7 +249,7 @@ export default function Pricing() {
         </div>
 
         <p className="text-center" style={{ color: 'var(--text-muted)', fontSize: '13px', marginTop: '24px' }}>
-          all prices in GBP. waitlist members get early access pricing locked in before public launch.
+          all prices in GBP. pricing will be confirmed at launch.
         </p>
       </section>
 
@@ -272,10 +272,10 @@ export default function Pricing() {
           zIndex: 1,
         }}
       >
-        <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>early access</p>
-        <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(28px, 4vw, 40px)', marginBottom: '16px' }}>secure your rate.<br />be first.</h2>
+        <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>join the waitlist</p>
+        <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(28px, 4vw, 40px)', marginBottom: '16px' }}>be first to know<br />when wispr launches.</h2>
         <p style={{ color: 'var(--text-secondary)', fontSize: '17px', marginBottom: '40px' }}>
-          waitlist members get locked-in founder pricing before we open to everyone.
+          sign up and we'll let you know as soon as wispr is ready.
         </p>
         <WaitlistForm center />
         <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '16px', letterSpacing: '0.04em' }}>
