@@ -51,6 +51,202 @@ const testimonials = [
   { quote: "i do 10 minutes every morning before the kids wake up. it's genuinely the best part of my day. i didn't expect to feel that way about an app.", name: 'emma k.', role: 'mum of two, freelance designer' },
 ]
 
+// ─── Phone mockup components ──────────────────────────────────────────────────
+
+function PhoneFrame({ width, height, children }: { width: number; height: number; children: React.ReactNode }) {
+  const islandW = Math.round(width * 0.38)
+  const islandH = Math.round(height * 0.05)
+  return (
+    <div style={{
+      width, height,
+      background: '#060E1B',
+      borderRadius: 44,
+      border: '2px solid rgba(255,255,255,0.13)',
+      boxShadow: '0 0 0 6px rgba(0,0,0,0.28), 0 48px 80px rgba(0,0,0,0.55), 0 0 80px rgba(0,212,255,0.07)',
+      position: 'relative',
+      overflow: 'hidden',
+      flexShrink: 0,
+    }}>
+      {/* Dynamic island */}
+      <div style={{
+        position: 'absolute', top: 13, left: '50%', transform: 'translateX(-50%)',
+        width: islandW, height: islandH, background: '#020810', borderRadius: islandH / 2, zIndex: 2,
+      }} />
+      {children}
+    </div>
+  )
+}
+
+function HeroPhone() {
+  return (
+    <PhoneFrame width={252} height={516}>
+      <div style={{ position: 'absolute', inset: 0, padding: '50px 18px 18px', display: 'flex', flexDirection: 'column' }}>
+        {/* Status */}
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 16 }}>
+          <span style={{ fontSize: 10, color: 'rgba(230,235,244,0.3)', fontWeight: 500, fontFamily: 'var(--font-body)' }}>9:41</span>
+        </div>
+        {/* Wordmark */}
+        <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: 'var(--electric)', letterSpacing: '-0.02em', marginBottom: 20 }}>wispr</div>
+        {/* Greeting */}
+        <div style={{ fontSize: 11, color: 'rgba(230,235,244,0.38)', fontFamily: 'var(--font-body)', marginBottom: 4 }}>good morning, sarah</div>
+        <div style={{ fontSize: 15, fontWeight: 600, color: '#E6EBF4', fontFamily: 'var(--font-body)', marginBottom: 20, lineHeight: 1.35 }}>your episode<br />is ready.</div>
+        {/* Episode card */}
+        <div style={{
+          background: 'linear-gradient(135deg, #0F2A4A 0%, #163564 100%)',
+          borderRadius: 16, padding: '16px',
+          border: '1px solid rgba(0,212,255,0.22)',
+          marginBottom: 'auto',
+        }}>
+          <div style={{ fontSize: 8, color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 10, fontFamily: 'var(--font-body)', fontWeight: 500 }}>TODAY · 10 MIN</div>
+          <div style={{ fontSize: 13, fontWeight: 600, color: '#E6EBF4', fontFamily: 'var(--font-body)', lineHeight: 1.35, marginBottom: 14 }}>navigating change<br />with clarity</div>
+          <div style={{ background: 'var(--electric)', color: '#07111E', borderRadius: 20, padding: '6px 14px', fontSize: 11, fontWeight: 600, fontFamily: 'var(--font-body)', display: 'inline-block' }}>listen now →</div>
+        </div>
+        {/* Chapter bars */}
+        <div style={{ display: 'flex', gap: 4, marginTop: 18, marginBottom: 16 }}>
+          {[1, 2, 3].map(i => (
+            <div key={i} style={{ height: 3, flex: 1, background: i === 1 ? 'rgba(0,212,255,0.7)' : 'rgba(230,235,244,0.08)', borderRadius: 2 }} />
+          ))}
+        </div>
+        {/* Tab bar */}
+        <div style={{ display: 'flex', justifyContent: 'space-around', paddingTop: 10, borderTop: '1px solid rgba(230,235,244,0.07)' }}>
+          {[{ name: 'home', active: true }, { name: 'library', active: false }, { name: 'you', active: false }].map(tab => (
+            <div key={tab.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}>
+              <div style={{ width: 6, height: 6, borderRadius: '50%', background: tab.active ? 'var(--electric)' : 'transparent', boxShadow: tab.active ? '0 0 8px rgba(0,212,255,0.8)' : 'none' }} />
+              <span style={{ fontSize: 8, color: tab.active ? 'var(--electric)' : 'rgba(230,235,244,0.22)', fontFamily: 'var(--font-body)' }}>{tab.name}</span>
+            </div>
+          ))}
+        </div>
+        {/* Home indicator */}
+        <div style={{ width: 80, height: 3, background: 'rgba(255,255,255,0.18)', borderRadius: 2, margin: '10px auto 0' }} />
+      </div>
+    </PhoneFrame>
+  )
+}
+
+function ChatPhone() {
+  return (
+    <PhoneFrame width={182} height={368}>
+      <div style={{ position: 'absolute', inset: 0, padding: '38px 14px 14px', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 10 }}>
+          <span style={{ fontSize: 9, color: 'rgba(230,235,244,0.3)', fontFamily: 'var(--font-body)' }}>9:41</span>
+        </div>
+        <div style={{ fontFamily: 'var(--font-display)', fontSize: 16, color: 'var(--electric)', marginBottom: 18 }}>wispr</div>
+        {/* Wispr message */}
+        <div style={{ background: '#0F2A4A', borderRadius: '12px 12px 12px 4px', padding: '10px 12px', marginBottom: 8, maxWidth: '85%' }}>
+          <p style={{ fontSize: 11, color: '#E6EBF4', fontFamily: 'var(--font-body)', lineHeight: 1.5, margin: 0 }}>how are you feeling today, sarah?</p>
+        </div>
+        {/* User reply */}
+        <div style={{ background: 'rgba(0,212,255,0.12)', border: '1px solid rgba(0,212,255,0.2)', borderRadius: '12px 12px 4px 12px', padding: '10px 12px', marginBottom: 8, alignSelf: 'flex-end', maxWidth: '85%' }}>
+          <p style={{ fontSize: 11, color: '#E6EBF4', fontFamily: 'var(--font-body)', lineHeight: 1.5, margin: 0 }}>pretty good, a bit scattered today</p>
+        </div>
+        {/* Wispr follow up */}
+        <div style={{ background: '#0F2A4A', borderRadius: '12px 12px 12px 4px', padding: '10px 12px', marginBottom: 'auto', maxWidth: '85%' }}>
+          <p style={{ fontSize: 11, color: '#E6EBF4', fontFamily: 'var(--font-body)', lineHeight: 1.5, margin: 0 }}>what would make today feel like a win?</p>
+        </div>
+        {/* Input */}
+        <div style={{ background: '#0F2A4A', borderRadius: 20, padding: '8px 14px', border: '1px solid rgba(230,235,244,0.1)' }}>
+          <span style={{ fontSize: 10, color: 'rgba(230,235,244,0.25)', fontFamily: 'var(--font-body)' }}>reply to wispr...</span>
+        </div>
+      </div>
+    </PhoneFrame>
+  )
+}
+
+function LoadingPhone() {
+  return (
+    <PhoneFrame width={182} height={368}>
+      <div style={{ position: 'absolute', inset: 0, padding: '38px 14px 14px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%', marginBottom: 10 }}>
+          <span style={{ fontSize: 9, color: 'rgba(230,235,244,0.3)', fontFamily: 'var(--font-body)' }}>9:41</span>
+        </div>
+        <div style={{ fontFamily: 'var(--font-display)', fontSize: 16, color: 'var(--electric)', marginBottom: 'auto', alignSelf: 'flex-start' }}>wispr</div>
+        {/* Loading ring */}
+        <div style={{ position: 'relative', width: 64, height: 64, marginBottom: 20 }}>
+          <div style={{
+            position: 'absolute', inset: 0, borderRadius: '50%',
+            border: '3px solid rgba(0,212,255,0.1)',
+          }} />
+          <div style={{
+            position: 'absolute', inset: 0, borderRadius: '50%',
+            border: '3px solid transparent',
+            borderTopColor: 'var(--electric)',
+            animation: 'spinRing 1.4s linear infinite',
+          }} />
+          <div style={{
+            position: 'absolute', inset: 8, borderRadius: '50%',
+            border: '2px solid transparent',
+            borderTopColor: 'rgba(196,151,106,0.6)',
+            animation: 'spinRing 2.1s linear infinite reverse',
+          }} />
+        </div>
+        <div style={{ fontFamily: 'var(--font-display)', fontSize: 14, color: '#E6EBF4', textAlign: 'center', marginBottom: 8 }}>crafting your<br />episode...</div>
+        <div style={{ fontSize: 10, color: 'rgba(230,235,244,0.38)', fontFamily: 'var(--font-body)', textAlign: 'center', lineHeight: 1.6, marginBottom: 'auto' }}>reading your check-in<br />building your script</div>
+        {/* Stage dots */}
+        <div style={{ display: 'flex', gap: 6, marginBottom: 8 }}>
+          {[1, 2, 3].map(i => (
+            <div key={i} style={{ width: 6, height: 6, borderRadius: '50%', background: i === 1 ? 'var(--electric)' : i === 2 ? 'rgba(0,212,255,0.3)' : 'rgba(230,235,244,0.1)' }} />
+          ))}
+        </div>
+      </div>
+    </PhoneFrame>
+  )
+}
+
+function PlayerPhone() {
+  return (
+    <PhoneFrame width={182} height={368}>
+      <div style={{ position: 'absolute', inset: 0, padding: '38px 14px 14px', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+          <span style={{ fontSize: 9, color: 'rgba(230,235,244,0.3)', fontFamily: 'var(--font-body)' }}>← back</span>
+          <span style={{ fontSize: 9, color: 'rgba(230,235,244,0.3)', fontFamily: 'var(--font-body)' }}>9:41</span>
+        </div>
+        {/* Artwork */}
+        <div style={{
+          width: '100%', aspectRatio: '1/1',
+          background: 'linear-gradient(135deg, #0F2A4A 0%, #163564 60%, rgba(0,212,255,0.15) 100%)',
+          borderRadius: 12, marginBottom: 12,
+          border: '1px solid rgba(0,212,255,0.15)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          flexShrink: 0,
+        }}>
+          <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: 'rgba(0,212,255,0.25)' }}>w</div>
+        </div>
+        {/* Title */}
+        <div style={{ fontSize: 11, fontWeight: 600, color: '#E6EBF4', fontFamily: 'var(--font-body)', marginBottom: 3, lineHeight: 1.3 }}>navigating change with clarity</div>
+        <div style={{ fontSize: 9, color: 'var(--amber)', fontFamily: 'var(--font-body)', marginBottom: 12 }}>chapter 1 of 3</div>
+        {/* Progress bar */}
+        <div style={{ height: 3, background: 'rgba(230,235,244,0.1)', borderRadius: 2, marginBottom: 4, position: 'relative' }}>
+          <div style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '38%', background: 'var(--electric)', borderRadius: 2 }} />
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 14 }}>
+          <span style={{ fontSize: 8, color: 'rgba(230,235,244,0.3)', fontFamily: 'var(--font-body)' }}>1:52</span>
+          <span style={{ fontSize: 8, color: 'rgba(230,235,244,0.3)', fontFamily: 'var(--font-body)' }}>5:00</span>
+        </div>
+        {/* Controls */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 20, marginBottom: 'auto' }}>
+          <span style={{ fontSize: 14, color: 'rgba(230,235,244,0.5)' }}>↺</span>
+          <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'var(--electric)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <span style={{ fontSize: 16, color: '#07111E', marginLeft: 2 }}>▮▮</span>
+          </div>
+          <span style={{ fontSize: 14, color: 'rgba(230,235,244,0.5)' }}>↻</span>
+        </div>
+      </div>
+    </PhoneFrame>
+  )
+}
+
+// ─── Floating dots ────────────────────────────────────────────────────────────
+
+const HERO_DOTS = [
+  { size: 8,  top: '9%',  left: '6%',   color: 'var(--electric)', delay: '0s',    dur: '4s'   },
+  { size: 5,  top: '22%', right: '5%',  color: 'var(--amber)',    delay: '1.8s',  dur: '5.5s' },
+  { size: 11, top: '56%', left: '3%',   color: 'var(--electric)', delay: '0.7s',  dur: '6s'   },
+  { size: 6,  top: '76%', right: '9%',  color: 'var(--amber)',    delay: '2.3s',  dur: '4.5s' },
+  { size: 9,  top: '40%', right: '-1%', color: 'var(--electric)', delay: '1.2s',  dur: '5s'   },
+]
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
 export default function Home() {
   return (
     <>
@@ -67,20 +263,48 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-24 px-6 max-w-6xl mx-auto" style={{ zIndex: 1 }}>
-        <div className="max-w-2xl">
-          <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '24px' }}>
-            coming soon — join the waitlist
-          </p>
-          <h1
-            className="font-display font-bold lowercase"
-            style={{ fontSize: 'clamp(48px, 7vw, 80px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: 'var(--text-primary)', marginBottom: '24px' }}
-          >
-            your coach.<br />your episode.<br />every day.
-          </h1>
-          <p style={{ fontSize: '18px', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '520px', marginBottom: '40px' }}>
-            a personalised audio coaching episode, made just for you, every morning. it learns who you are. it gets better the more you talk.
-          </p>
-          <WaitlistForm />
+        <div className="flex items-center gap-12 lg:gap-20">
+
+          {/* Left: text + form */}
+          <div style={{ flex: '1 1 0', minWidth: 0 }}>
+            <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '24px' }}>
+              coming soon — join the waitlist
+            </p>
+            <h1
+              className="font-display font-bold lowercase"
+              style={{ fontSize: 'clamp(48px, 7vw, 80px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: 'var(--text-primary)', marginBottom: '24px' }}
+            >
+              your coach.<br />your episode.<br />every day.
+            </h1>
+            <p style={{ fontSize: '18px', color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '520px', marginBottom: '40px' }}>
+              a personalised audio coaching episode, made just for you, every morning. it learns who you are. it gets better the more you talk.
+            </p>
+            <WaitlistForm />
+          </div>
+
+          {/* Right: phone + floating dots (desktop only) */}
+          <div className="hidden lg:flex justify-center items-center shrink-0 relative" style={{ width: 340, height: 560 }}>
+            {/* Soft ambient glow behind phone */}
+            <div style={{
+              position: 'absolute', inset: -48,
+              background: 'radial-gradient(ellipse at center, rgba(0,212,255,0.10) 0%, transparent 68%)',
+              pointerEvents: 'none',
+            }} />
+            {/* Floating dots */}
+            {HERO_DOTS.map((d, i) => (
+              <div key={i} style={{
+                position: 'absolute',
+                width: d.size, height: d.size,
+                borderRadius: '50%',
+                background: d.color,
+                top: d.top, left: d.left, right: d.right,
+                animation: `floatDot ${d.dur} ease-in-out ${d.delay} infinite`,
+                pointerEvents: 'none',
+              }} />
+            ))}
+            <HeroPhone />
+          </div>
+
         </div>
       </section>
 
@@ -125,6 +349,46 @@ export default function Home() {
               </div>
             </FadeUp>
           ))}
+        </div>
+      </section>
+
+      {/* APP SCREENS */}
+      <section className="max-w-6xl mx-auto px-6 pb-24" style={{ position: 'relative', zIndex: 1 }}>
+        <FadeUp>
+          <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>the app</p>
+          <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(28px, 4vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '56px' }}>
+            see it in action
+          </h2>
+        </FadeUp>
+        <div className="flex flex-col md:flex-row justify-center items-start gap-8 md:gap-6">
+
+          {/* Check in */}
+          <FadeUp delay={0} className="flex flex-col items-center">
+            <div style={{ marginBottom: 24 }}><ChatPhone /></div>
+            <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', textAlign: 'center', marginBottom: 6 }}>01 — check in</p>
+            <p style={{ fontSize: '14px', color: 'var(--text-secondary)', textAlign: 'center', maxWidth: 182, lineHeight: 1.6 }}>one minute conversation with wispr, every morning.</p>
+          </FadeUp>
+
+          {/* Arrow */}
+          <div className="hidden md:flex items-center" style={{ paddingTop: 82, color: 'rgba(230,235,244,0.2)', fontSize: 24 }}>→</div>
+
+          {/* Generating */}
+          <FadeUp delay={0.1} className="flex flex-col items-center">
+            <div style={{ marginBottom: 24 }}><LoadingPhone /></div>
+            <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', textAlign: 'center', marginBottom: 6 }}>02 — crafted for you</p>
+            <p style={{ fontSize: '14px', color: 'var(--text-secondary)', textAlign: 'center', maxWidth: 182, lineHeight: 1.6 }}>wispr writes and voices an episode just for today.</p>
+          </FadeUp>
+
+          {/* Arrow */}
+          <div className="hidden md:flex items-center" style={{ paddingTop: 82, color: 'rgba(230,235,244,0.2)', fontSize: 24 }}>→</div>
+
+          {/* Player */}
+          <FadeUp delay={0.2} className="flex flex-col items-center">
+            <div style={{ marginBottom: 24 }}><PlayerPhone /></div>
+            <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', textAlign: 'center', marginBottom: 6 }}>03 — listen & grow</p>
+            <p style={{ fontSize: '14px', color: 'var(--text-secondary)', textAlign: 'center', maxWidth: 182, lineHeight: 1.6 }}>5, 10, or 15 minutes. your commute, your walk, your morning.</p>
+          </FadeUp>
+
         </div>
       </section>
 

@@ -64,6 +64,18 @@ body {
   }
 }
 
+/* Floating dot animation — used in hero */
+@keyframes floatDot {
+  0%, 100% { transform: translateY(0px); opacity: 0.45; }
+  50% { transform: translateY(-20px); opacity: 0.95; }
+}
+
+/* Loading ring spin — used in phone mockup */
+@keyframes spinRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 /* Fade-up animation */
 @keyframes fadeUp {
   from {
