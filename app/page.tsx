@@ -38,11 +38,14 @@ const steps = [
 
 const features = [
   { title: 'truly personalised', body: 'every episode is generated for you specifically — not a template with your name dropped in. wispr knows your goals, your blocks, your way of thinking.' },
-  { title: 'audio-first', body: 'built for your routine, not your screen time. designed to listen to on walks, during commutes, or with your morning coffee.' },
+  { title: 'audio-first', body: "built for your routine, not your screen time. designed to listen to on walks, during commutes, or with your morning coffee." },
   { title: 'it learns', body: 'the more you use wispr, the better it knows you. every conversation adds to its understanding. episodes get more resonant over time.' },
+  { title: 'go off script', body: "not in the mood for your regular episode? ask wispr to explore anything on your mind — a specific challenge, a decision you're wrestling with, whatever needs space today." },
+  { title: 'stories for you', body: "wispr weaves in stories from psychology, history, and human experience — chosen for what you're working through right now. not random. relevant to you." },
+  { title: 'make it yours', body: "shape your host's personality and approach. warm and conversational or thoughtful and direct. challenge you or support you. wispr adapts to how you like to be coached." },
   { title: 'low friction', body: 'one minute check-in. ten minutes of clarity. the bar to showing up is low. the payoff is real.' },
-  { title: 'private by design', body: 'your check-ins, your reflections, your episodes — they stay yours. wispr is a judgement-free space to be honest about where you actually are.' },
-  { title: 'affordable coaching', body: "a human coach starts at £70 an hour. wispr is a fraction of that — and it's available every single day, without booking ahead." },
+  { title: 'private by design', body: "your check-ins, your reflections, your episodes — they stay yours. wispr is a judgement-free space to be honest about where you actually are." },
+  { title: 'a companion, not a replacement', body: 'good human coaching starts at £100+ an hour. wispr is a fraction of that. not a substitute for human connection — a daily companion for every moment in between.' },
 ]
 
 const testimonials = [
@@ -421,6 +424,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SUPPLEMENT / EMOTIONAL CALLOUT */}
+      <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', position: 'relative', zIndex: 1 }}>
+        <div className="max-w-4xl mx-auto px-6 py-24">
+          <FadeUp>
+            <div style={{ borderLeft: '3px solid var(--amber)', paddingLeft: '32px' }}>
+              <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(28px, 4vw, 44px)', lineHeight: 1.15, letterSpacing: '-0.02em', marginBottom: '32px', color: 'var(--text-primary)' }}>
+                wispr doesn't replace human coaching.<br />it shows up when nothing else can.
+              </h2>
+              <p style={{ fontSize: '17px', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '20px', maxWidth: '640px' }}>
+                the moments that shape us aren't always scheduled. they happen in the quiet before everyone wakes up. on the commute when your mind won't settle. late at night when you feel unseen, unheard, and there's no one to call.
+              </p>
+              <p style={{ fontSize: '17px', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '20px', maxWidth: '640px' }}>
+                and some things — the biggest dreams, the deepest doubts — we don't say out loud. not to a partner, not to a friend. not yet. maybe not ever. wispr is the space where you can.
+              </p>
+              <p style={{ fontSize: '17px', color: 'var(--text-secondary)', lineHeight: 1.8, maxWidth: '640px' }}>
+                good human coaching starts at £100+ an hour and demands a booking. wispr is there every day, in your pocket, for a fraction of the cost — and it never judges what you bring to it.
+              </p>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <section className="max-w-6xl mx-auto px-6 pb-24" style={{ position: 'relative', zIndex: 1 }}>
         <FadeUp><p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>what people are saying</p></FadeUp>
@@ -447,18 +472,19 @@ export default function Home() {
       {/* PRICING TEASER */}
       <FadeUp>
         <div className="text-center px-6 py-24" style={{ position: 'relative', zIndex: 1 }}>
-          <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>pricing</p>
-          <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(32px, 5vw, 48px)', marginBottom: '16px' }}>simple pricing,<br />coming soon</h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '17px', margin: '0 auto 32px', maxWidth: '400px' }}>
-            wispr is coming soon. join the waitlist to be first to know when we launch.
+          <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>from £5 a month</p>
+          <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(28px, 4vw, 44px)', marginBottom: '16px' }}>daily coaching for less<br />than a coffee a week</h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '17px', margin: '0 auto 32px', maxWidth: '480px' }}>
+            human coaching at £100+ an hour is out of reach for most people. wispr brings something genuinely personal to every day — at a price that makes sense. 7 days free on any plan.
           </p>
           <a
             href="/pricing"
             style={{
-              background: 'var(--electric)',
-              color: 'var(--ink)',
+              border: '1px solid rgba(0,212,255,0.35)',
+              color: 'var(--electric)',
+              background: 'transparent',
               borderRadius: '9999px',
-              padding: '14px 28px',
+              padding: '13px 28px',
               fontSize: '15px',
               fontWeight: 600,
               textDecoration: 'none',
@@ -466,7 +492,7 @@ export default function Home() {
               transition: 'opacity 0.15s',
             }}
           >
-            see pricing →
+            see full pricing →
           </a>
         </div>
       </FadeUp>
@@ -483,12 +509,12 @@ export default function Home() {
           zIndex: 1,
         }}
       >
-        <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>get started</p>
+        <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>join the waitlist</p>
         <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(32px, 5vw, 48px)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '16px' }}>
-          your coach.<br />your episode.<br />every day.
+          always there.<br />always learning.<br />always yours.
         </h2>
         <p style={{ color: 'var(--text-secondary)', fontSize: '17px', marginBottom: '40px' }}>
-          join the waitlist and be first when wispr opens up.
+          wispr is launching soon. join the waitlist and be first in.
         </p>
         <WaitlistForm center />
         <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '16px', letterSpacing: '0.04em' }}>

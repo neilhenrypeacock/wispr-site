@@ -6,7 +6,7 @@ import FadeUp from '@/components/FadeUp'
 const beliefs = [
   {
     title: 'coaching should be daily, not weekly',
-    body: "growth doesn't happen in 60-minute slots once a week. it happens in the everyday moments — the morning you almost gave up, the afternoon you lost focus, the evening you couldn't see the bigger picture.",
+    body: "growth doesn't happen in 60-minute slots once a week. it happens in the everyday moments — the quiet morning before the house wakes up, the commute when your mind won't settle, the evening you feel unseen and there's no one around to say the thing you need to hear.",
   },
   {
     title: "personalisation isn't a feature. it's the point.",
@@ -18,7 +18,7 @@ const beliefs = [
   },
   {
     title: 'honesty builds trust. trust builds change.',
-    body: "wispr works because you can be completely honest with it. no judgement. no performance. just you and a space to figure out what's actually going on.",
+    body: "wispr works because you can be completely honest with it. no judgement. no performance. and sometimes — the biggest dreams, the deepest doubts — these are exactly the things we don't say to the people closest to us. wispr is the space where you can.",
   },
 ]
 
@@ -51,8 +51,11 @@ export default function About() {
             <p style={{ fontSize: '17px', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '24px' }}>
               wispr started from a simple belief: that the kind of reflection that actually changes you doesn't come from generic advice. it comes from someone who knows you — your goals, your blockers, the way you think, where you're at today.
             </p>
-            <p style={{ fontSize: '17px', color: 'var(--text-secondary)', lineHeight: 1.8 }}>
+            <p style={{ fontSize: '17px', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '24px' }}>
               we built wispr to be that. a coaching companion that gets more personal over time. that shows up every day. that makes five minutes in the morning feel like the most useful thing you did all week.
+            </p>
+            <p style={{ fontSize: '17px', color: 'var(--text-secondary)', lineHeight: 1.8 }}>
+              wispr isn't a replacement for human coaching or real human connection — it's a supplement to it. the kind of daily support that was previously inaccessible, that shows up in the gaps, and that never asks you to be anyone other than exactly who you are.
             </p>
           </div>
         </FadeUp>
@@ -94,9 +97,17 @@ export default function About() {
             label: 'your episode',
             body: 'wispr generates a personalised coaching episode — 5, 10, or 15 minutes, your choice. voiced by a calm AI voice, written specifically for where you are today. designed to listen to during your morning walk, your commute, or your quiet moment before the day starts.',
           },
+          {
+            label: 'go off script',
+            body: "on days when you want to explore something specific — a decision, a challenge, something you can't quite articulate — you can go off script. ask wispr to build an episode around anything on your mind. no template. no agenda. just whatever needs space.",
+          },
+          {
+            label: 'stories for you',
+            body: 'wispr weaves in stories from psychology, history, philosophy, and human experience — not randomly, but chosen for what you\'re working through. hearing how others have faced what you\'re facing has a way of shifting something.',
+          },
         ].map((item, i) => (
           <FadeUp key={item.label} delay={i * 0.08}>
-            <div style={{ padding: '32px 0', borderBottom: i < 2 ? '1px solid var(--border)' : undefined }}>
+            <div style={{ padding: '32px 0', borderBottom: i < 4 ? '1px solid var(--border)' : undefined }}>
               <p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '8px' }}>{item.label}</p>
               <p style={{ fontSize: '16px', color: 'var(--text-secondary)', lineHeight: 1.7 }}>{item.body}</p>
             </div>
