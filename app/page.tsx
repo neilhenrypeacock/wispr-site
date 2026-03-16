@@ -447,11 +447,11 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="max-w-6xl mx-auto px-6 pb-24" style={{ position: 'relative', zIndex: 1 }}>
-        <FadeUp><p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>what people are saying</p></FadeUp>
+      <section className="max-w-6xl mx-auto px-6 py-24" style={{ position: 'relative', zIndex: 1 }}>
+        <FadeUp><p style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--amber)', marginBottom: '16px' }}>in their words</p></FadeUp>
         <FadeUp delay={0.05}>
           <h2 className="font-display font-bold lowercase" style={{ fontSize: 'clamp(32px, 5vw, 48px)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '56px' }}>
-            what beta users are saying
+            what people are saying
           </h2>
         </FadeUp>
         <div className="grid md:grid-cols-3 gap-4">
