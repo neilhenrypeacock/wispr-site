@@ -42,13 +42,13 @@ const features = [
   { title: 'it learns', body: 'the more you use wispr, the better it knows you. every conversation adds to its understanding. episodes get more resonant over time.' },
   { title: 'low friction', body: 'one minute check-in. ten minutes of clarity. the bar to showing up is low. the payoff is real.' },
   { title: 'private by design', body: 'your check-ins, your reflections, your episodes — they stay yours. wispr is a judgement-free space to be honest about where you actually are.' },
-  { title: 'affordable coaching', body: 'a human coach starts at £70 an hour. wispr is a fraction of that — and it's available every single day, without booking ahead.' },
+  { title: 'affordable coaching', body: "a human coach starts at £70 an hour. wispr is a fraction of that — and it's available every single day, without booking ahead." },
 ]
 
 const testimonials = [
   { quote: "i've tried every journalling app. this is the first thing that actually feels like it knows what i need to hear. it's like having a coach in my pocket.", name: 'sarah t.', role: 'startup founder' },
-  { quote: 'the first episode made me cry a little. it got me so accurately. i don't know how it does it but i'm hooked.', name: 'james r.', role: 'product manager' },
-  { quote: 'i do 10 minutes every morning before the kids wake up. it's genuinely the best part of my day. i didn't expect to feel that way about an app.', name: 'emma k.', role: 'mum of two, freelance designer' },
+  { quote: "the first episode made me cry a little. it got me so accurately. i don't know how it does it but i'm hooked.", name: 'james r.', role: 'product manager' },
+  { quote: "i do 10 minutes every morning before the kids wake up. it's genuinely the best part of my day. i didn't expect to feel that way about an app.", name: 'emma k.', role: 'mum of two, freelance designer' },
 ]
 
 export default function Home() {
