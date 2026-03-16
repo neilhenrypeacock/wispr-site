@@ -17,7 +17,7 @@ const steps = [
   {
     num: '02',
     title: 'check in each day',
-    body: 'one minute. wispr asks how you're feeling, what's on your mind, what you need today. that's your episode brief.',
+    body: "one minute. wispr asks how you're feeling, what's on your mind, what you need today. that's your episode brief.",
     icon: (
       <svg className="w-10 h-10" style={{ color: 'var(--electric)' }} fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" strokeLinecap="round" strokeLinejoin="round" />
@@ -46,7 +46,7 @@ const features = [
 ]
 
 const testimonials = [
-  { quote: 'i've tried every journalling app. this is the first thing that actually feels like it knows what i need to hear. it's like having a coach in my pocket.', name: 'sarah t.', role: 'startup founder' },
+  { quote: "i've tried every journalling app. this is the first thing that actually feels like it knows what i need to hear. it's like having a coach in my pocket.", name: 'sarah t.', role: 'startup founder' },
   { quote: 'the first episode made me cry a little. it got me so accurately. i don't know how it does it but i'm hooked.', name: 'james r.', role: 'product manager' },
   { quote: 'i do 10 minutes every morning before the kids wake up. it's genuinely the best part of my day. i didn't expect to feel that way about an app.', name: 'emma k.', role: 'mum of two, freelance designer' },
 ]

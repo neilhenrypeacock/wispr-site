@@ -9,10 +9,10 @@ import FadeUp from '@/components/FadeUp'
 const faqItems = [
   { q: 'is there a free trial?', a: 'yes — 7 days of full access, no credit card required. you get the complete wispr experience from day one.' },
   { q: 'what happens after the trial?', a: 'after 7 days you can subscribe to the pro plan to keep going. pricing is still being finalised — waitlist members will get first access and a locked-in early rate.' },
-  { q: 'is it available on android?', a: 'iOS only for now. android is on the roadmap — join the waitlist and we'll let you know when it's ready.' },
+  { q: 'is it available on android?', a: "iOS only for now. android is on the roadmap — join the waitlist and we'll let you know when it's ready." },
   { q: 'can i cancel anytime?', a: 'yes. cancel anytime, no questions asked. you keep access until the end of your billing period.' },
-  { q: 'what AI does wispr use?', a: 'wispr uses Claude by Anthropic — one of the most trusted and thoughtful AI systems available. it's built by a company focused on making AI that's safe and genuinely useful.' },
-  { q: 'is my data private?', a: 'yes. your conversations and episodes are private to you. we don't sell your data, and we don't use your personal reflections to train AI models.' },
+  { q: 'what AI does wispr use?', a: "wispr uses Claude by Anthropic — one of the most trusted and thoughtful AI systems available. it's built by a company focused on making AI that's safe and genuinely useful." },
+  { q: 'is my data private?', a: "yes. your conversations and episodes are private to you. we don't sell your data, and we don't use your personal reflections to train AI models." },
 ]
 
 function Faq() {

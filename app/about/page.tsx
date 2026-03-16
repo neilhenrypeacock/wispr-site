@@ -6,19 +6,19 @@ import FadeUp from '@/components/FadeUp'
 const beliefs = [
   {
     title: 'coaching should be daily, not weekly',
-    body: 'growth doesn't happen in 60-minute slots once a week. it happens in the everyday moments — the morning you almost gave up, the afternoon you lost focus, the evening you couldn't see the bigger picture.',
+    body: "growth doesn't happen in 60-minute slots once a week. it happens in the everyday moments — the morning you almost gave up, the afternoon you lost focus, the evening you couldn't see the bigger picture.",
   },
   {
-    title: 'personalisation isn't a feature. it's the point.',
+    title: "personalisation isn't a feature. it's the point.",
     body: 'generic advice is almost useless. what moves you is specific to you — your history, your language, your patterns. the best coaching meets you exactly where you are.',
   },
   {
     title: 'audio is the right medium for reflection',
-    body: 'you don't need another screen to stare at. you need something you can absorb while you walk, drive, or make coffee. audio creates space. screens create distraction.',
+    body: "you don't need another screen to stare at. you need something you can absorb while you walk, drive, or make coffee. audio creates space. screens create distraction.",
   },
   {
     title: 'honesty builds trust. trust builds change.',
-    body: 'wispr works because you can be completely honest with it. no judgement. no performance. just you and a space to figure out what's actually going on.',
+    body: "wispr works because you can be completely honest with it. no judgement. no performance. just you and a space to figure out what's actually going on.",
   },
 ]
 
