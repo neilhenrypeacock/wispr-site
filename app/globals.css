@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #07111E;
+  --royal: #0F2A4A;
+  --surface-high: #163564;
+  --electric: #00D4FF;
+  --amber: #C4976A;
+  --sage: #D0DEDD;
+  --text-primary: #E6EBF4;
+  --text-secondary: rgba(230,235,244,0.45);
+  --text-muted: rgba(230,235,244,0.28);
+  --border: rgba(230,235,244,0.10);
+  --success: #34D399;
+  --error: #FF5C5C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--text-primary);
+  font-family: var(--font-body), 'Jost', sans-serif;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), 'Outfit', sans-serif;
+  }
+  .text-primary {
+    color: var(--text-primary);
+  }
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+  .text-electric {
+    color: var(--electric);
+  }
+  .text-amber-brand {
+    color: var(--amber);
+  }
+  .bg-ink {
+    background-color: var(--ink);
+  }
+  .bg-royal {
+    background-color: var(--royal);
+  }
+  .border-brand {
+    border-color: var(--border);
+  }
+  .lowercase-brand {
+    text-transform: lowercase;
+  }
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up-animate {
+  animation: fadeUp 0.5s ease forwards;
+}
